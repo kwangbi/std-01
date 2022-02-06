@@ -1,0 +1,61 @@
+.signin-container {
+  @include container;
+  background-color: $bg-g;
+
+  .wrapper {
+    margin: 0 auto;
+    width: 500px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .signin-box {
+      background-color: $bg-w;
+      width: 100%;
+      border: 1px solid $bg-b;
+      .box-header {
+        border-bottom: 1px solid $border;
+        padding: 20px;
+        text-align: center;
+        .box-title {
+          font-size: 2rem;
+          font-weight: 700;
+          letter-spacing: -0.5px;
+        } // .box-title
+      } // .box-header
+      .box-body {
+        border-bottom: 1px solid $border;
+        padding: 20px;
+        .input-group {
+          margin-top: 20px;
+          &:first-child {
+            margin-top: 0;
+          }
+          height: 50px;
+          label {
+            display: inline-block;
+            width: 100px;
+            height: 100%;
+            font-size: 1.25rem;
+            font-weight: 700;
+          } // label
+          input {
+            display: inline-block;
+            width: calc(100% - 100px);
+            height: 100%;
+            font-size: 1rem;
+            padding: 5px;
+          } // input
+        } // input-group
+      } // .box-body
+      .box-footer {
+        border-bottom: 1px solid $border;
+        padding: 20px;
+        .btn-submit {
+          @include btn-black(100%, 50px);
+        } // btn-submit
+      } // .box-header
+    } // .signin-box
+  } //.wrapper
+} // signin-container
