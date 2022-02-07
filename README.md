@@ -16,3 +16,10 @@ npm install --save @zeit/next-css
 #npm install --save node-sass
 
 npm install sass
+
+-- axios 설치
+npm install --save axios
+
+-- express 설치
+npm install express morgan express express-session cookie-parser dotenv
+npm install -D nodemon
