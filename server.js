@@ -47,6 +47,15 @@ app.prepare().then(() => {
     //     return app.render(req, res, '/user', { id: req.params.id });
     // });
 
+    server.get('/goods/:id',(req,res)=>{
+        const actualPage = '/goods_detail'
+        const queryParams = {
+            goods_idx: req.params.id
+        }
+
+        return app.render(req,res,actualPage,queryParams)
+    });
+
     server.get('*', (req, res) => { // 모든 get 요청 처리
         return handle(req, res); // next의 get 요청 처리기
     });
